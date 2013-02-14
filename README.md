@@ -65,4 +65,4 @@ License and Author
 
 Author:: Elliot Kendall (<elliot.kendall@ucsf.edu>)
 
-Copyright:: 2013, University of California
+Copyright:: 2013, The Regents of the University of California
