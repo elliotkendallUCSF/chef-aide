@@ -43,22 +43,22 @@ add to the paths dictionary with locations to ignore.  Remember that paths
 use regex syntax, not glob syntax, so "all files in /opt/foo" is expressed
 as "/opt/foo/.*" not "/opt/foo/*".
 
-{
-  "name": "foo",
-  ...
-  "run_list": [
-    ...
-    "recipe[aide]"
-  ],
-  "override_attributes": {
-    ...
-    "aide": {
-      "paths": {
-        "/opt/foo/.*": "!"
+    {
+      "name": "foo",
+      ...
+      "run_list": [
+        ...
+        "recipe[aide]"
+      ],
+      "override_attributes": {
+        ...
+        "aide": {
+          "paths": {
+            "/opt/foo/.*": "!"
+          }
+        }
       }
     }
-  }
-}
 
 License and Author
 ==================
