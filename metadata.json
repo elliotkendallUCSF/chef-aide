@@ -4,7 +4,7 @@
   "long_description": "",
   "maintainer": "Elliot Kendall",
   "maintainer_email": "elliot.kendall@ucsf.edu",
-  "license": "Apache 2.0",
+  "license": "See License.md",
   "platforms": {
     "centos": [
 
