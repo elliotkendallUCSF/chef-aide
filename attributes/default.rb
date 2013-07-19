@@ -3,6 +3,12 @@
 # Attributes:: default
 #
 
+# Use test mode to disable rebuilding the aide database every run.
+# This is desinged to save you time while working on building
+# your cookbook that relays on this one. Return to false when
+# rolling out to any non development enviorment.
+default["aide"]["testmode"] = "false"
+
 case platform
 when "centos","redhat","fedora"
   default["aide"]["binary"] = "/usr/sbin/aide"
