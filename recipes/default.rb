@@ -23,5 +23,7 @@ end
 script "generate_database" do
   action :nothing
   interpreter "bash"
-  code "#{node['aide']['binary']} #{node['aide']['extra_parameters']} --init"
+  unless node['aide']['testmode'] == "true"
+    code "#{node['aide']['binary']} #{node['aide']['extra_parameters']} --init"
+  end
 end
