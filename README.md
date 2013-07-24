@@ -35,6 +35,9 @@ as in the default AIDE config file.
 * `node["aide"]["paths"]` - A dictionary of paths for AIDE to inspect and
 how to handle them, pre-populated as in the default AIDE config file.
 
+* `node["aide"]["report_url"]` - Where to send the output.  Defaults to "stdout". 
+See the AIDE documentation for other options.
+
 Usage
 =====
 
