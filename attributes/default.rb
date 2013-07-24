@@ -8,6 +8,7 @@
 # your cookbook that relays on this one. Return to false when
 # rolling out to any non development enviorment.
 default["aide"]["testmode"] = "false"
+default["aide"]["report_url"] = "stdout"
 
 case platform
 when "centos","redhat","fedora"

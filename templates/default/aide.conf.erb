@@ -3,7 +3,7 @@ database=file:@@{DBDIR}/aide.db.gz
 database_out=file:@@{DBDIR}/aide.db.gz
 gzip_dbout=yes
 verbose=5
-report_url=stdout
+report_url=<%= node["aide"]["report_url"] %>
 
 <% node["aide"]["macros"].each do |name,definition| -%>
 <%= name %> = <%= definition %>
