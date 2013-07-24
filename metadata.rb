@@ -6,6 +6,6 @@ maintainer_email    "elliot.kendall@ucsf.edu"
 license             "BSD"
 version             "0.1.2"
 
-supports            "redhat", "centos"
+supports            "centos", "ubuntu"
 
 recipe              "aide", "Installs and configures AIDE HIDS"
