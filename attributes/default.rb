@@ -10,8 +10,8 @@
 default['aide']['testmode'] = 'false'
 default['aide']['report_url'] = 'stdout'
 
-case platform
-when 'centos', 'redhat', 'fedora'
+case node['platform']
+when 'rhel'
   default['aide']['binary'] = '/usr/sbin/aide'
   default['aide']['config'] = '/etc/aide.conf'
   default['aide']['extra_parameters'] = ''
@@ -31,6 +31,7 @@ default['aide']['macros'] = {
   'LSPP' => 'R+sha256',
   'DATAONLY' => 'p+n+u+g+s+acl+selinux+xattrs+md5+sha256+rmd160+tiger'
 }
+
 default['aide']['paths'] = {
   '/boot' => 'NORMAL',
   '/bin' => 'NORMAL',
