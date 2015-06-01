@@ -3,10 +3,11 @@ package 'aide' do
 end
 
 # Always re-create the file, to fire a notification
-file "#{node['aide']['config']}" do
+file node['aide']['config'] do
   action :delete
 end
-template "#{node['aide']['config']}" do
+
+template node['aide']['config'] do
   notifies :run, 'script[generate_database]'
 end
 
@@ -14,7 +15,8 @@ template '/etc/cron.d/aide' do
   action :create
   notifies :restart, "service[#{node['aide']['cron_service']}]"
 end
-service "#{node['aide']['cron_service']}" do
+
+service node['aide']['cron_service'] do
   action :nothing
 end
 
