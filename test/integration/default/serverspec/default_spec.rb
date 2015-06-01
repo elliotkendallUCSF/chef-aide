@@ -35,4 +35,3 @@ describe file('/var/lib/aide/aide.db.gz') do
   it { should be_grouped_into 'root' }
   it { should be_mode 600 }
 end
-
