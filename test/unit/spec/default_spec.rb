@@ -7,7 +7,7 @@ describe 'aide::default' do
   let(:chef_run) { ChefSpec::SoloRunner.new.converge(described_recipe) }
 
   it 'writes aide.conf file' do
-    chef_run.node.set['aide']['paths'] = {'/data' => '!'}
+    chef_run.node.set['aide']['paths'] = { '/data' => '!' }
     expect(chef_run).to render_file('/etc/aide/aide.conf').with_content { |content|
       expect(content).to include('/data')
     }
