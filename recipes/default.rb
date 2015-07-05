@@ -11,13 +11,20 @@ template node['aide']['config'] do
   notifies :run, 'script[generate_database]'
 end
 
-template '/etc/cron.d/aide' do
+cron 'aide' do
   action :create
-  notifies :restart, "service[#{node['aide']['cron_service']}]"
+  minute '30'
+  user 'root'
+  command "#{node["aide"]["binary"]} #{node["aide"]["extra_parameters"]} --check -V3"
 end
 
-service node['aide']['cron_service'] do
-  action :nothing
+cron 'aide' do
+  action :create
+  minute '0'
+  hour '5'
+  weekday '1'
+  user 'root'
+  command "#{node["aide"]["binary"]} #{node["aide"]["extra_parameters"]} --check -V5"
 end
 
 # Run by a notification from the template, so it happens at the end of
