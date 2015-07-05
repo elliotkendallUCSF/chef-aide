@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mburns/chef-aide.svg)](https://travis-ci.org/mburns/chef-aide)
+
 Description
 ===========
 

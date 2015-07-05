@@ -1,0 +1,14 @@
+DEPENDENCIES
+  aide
+    path: .
+  apt
+  test
+    path: test/fixtures/cookbooks/test
+  yum
+
+GRAPH
+  aide (0.1.2)
+  apt (2.7.0)
+  test (0.1.0)
+    aide (>= 0.0.0)
+  yum (3.6.0)
